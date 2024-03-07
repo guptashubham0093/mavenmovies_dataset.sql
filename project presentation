@@ -1,0 +1,87 @@
+use mavenmovies
+
+#1# Write a SQL query to count the number of characters except for  the spaces for each actor. 
+	#Return the first 10 actors' name lengths along with their names
+    ;
+    
+            select concat(first_name,last_name) as full_names,
+            length(concat(first_name,last_name)) as lengths from actor
+			limit 10;
+ 
+           
+#2#  List all Oscar awardees(Actors who received the Oscar award) with their full names and the length of their names. 
+    
+	       select  concat(first_name,"  ",last_name) as full_names,
+           length(concat(first_name,last_name))as length
+		   from actor_award
+	       where awards like "%oscar%";
+		
+         
+#3# Find the actors who have acted in the film Frost Head.
+
+          select distinct(concat(a.first_name,"  ", a.last_name)) as actors,f.title as film
+          from film as f
+          inner join film_actor as f1
+	      using(film_id)
+          inner join actor as a
+          using(actor_id)
+          where f.title = 'Frost Head';
+         
+#4#  Pull all the films acted by the actor ‘Will Wilson.’
+
+	      select f.title as film,concat(a.first_name,"  ", a.last_name) as actor
+          from film as f
+          inner join film_actor as f1
+	      using(film_id)
+          inner join actor as a
+          using(actor_id)
+          where a.first_name="will" and a.last_name= "wilson";
+         
+
+#5# Pull all the films which were rented and return them in the month of May
+          
+          select title as film,return_date as month_name from rental
+          inner join inventory
+          using(inventory_id)
+          inner join film
+          using(film_id)
+          where monthname(return_date) = 'may';
+          
+          
+#6#  Pull all the films with ‘Comedy’ category.
+
+          select f.title as films, c.name as category from film as f
+          inner join film_category
+          using(film_id)
+          inner join category as c
+          using(category_id)
+          where c.name = "comedy";
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
