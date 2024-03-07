@@ -3,7 +3,9 @@ AIM of the Project: Using SQL query to analyze the Maven movies database, to dra
 
 I have Used concepts like Wildcards, where and limit clause, joins, order by, group by, length, date and concat functions.
 
-Following are the questions to answer: QUESTION 1: Write a SQL query to count the number of characters except for the spaces for each actor. Return the first 10 actors' name lengths along with their names.
+Following are the questions to answer:
+
+QUESTION 1: Write a SQL query to count the number of characters except for the spaces for each actor. Return the first 10 actors' name lengths along with their names.
 
 QUESTION 2: List all Oscar awardees(Actors who received the Oscar award) with their full names and the length of their names
 
