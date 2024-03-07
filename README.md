@@ -1,7 +1,7 @@
 # mavenmovies_dataset.sql
 AIM of the Project: Using SQL query to analyze the Maven movies database, to draw insights from the dataset, finding the patterns and answering the questions.
 
-I have Used concepts like Wildcards, where and limit clause, joins, order by, group by, length, date and concat functions.
+I have Used concepts like  where and limit clause, joins, order by, group by, length, date and concat functions.
 
 Following are the questions to answer:
 
